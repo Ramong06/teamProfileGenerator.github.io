@@ -11,6 +11,9 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./lib/htmlRenderer");
 const { type } = require("os");
 
+// function whats next (ee menu)= inquirer askinng who esle are you adding option 3 that is gong to launch fs.writfile that is going to render the page
+//intern = > function inters - ask more questions about intern once you done with intern go back to ee menu (unless some is done)
+
 inquirer.prompt([
    {
        type: 'input',
@@ -33,7 +36,8 @@ inquirer.prompt([
     message: 'What is your office number?'
    }
 ]).then(function(data) {
-    const manager = new Manager
+    const manager = new Manager(data.name, data.id, data.email, data.officeNumber);
+    //function call to ask what other ees you need
 }
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
